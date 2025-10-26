@@ -4,10 +4,10 @@
       <nav class="flex items-center justify-between">
         <div class="text-2xl font-bold text-gray-900 dark:text-white">Portfolio</div>
         <div class="flex items-center gap-6">
-          <NuxtLink to="/" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Home</NuxtLink>
-          <NuxtLink to="/projects" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</NuxtLink>
-          <NuxtLink to="/about" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">About</NuxtLink>
-          <NuxtLink to="/contact" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</NuxtLink>
+          <AppHeaderLink to="/" text="Home" />
+          <AppHeaderLink to="/projects" text="Projects" />
+          <AppHeaderLink to="/about" text="About" />
+          <AppHeaderLink to="/contact" text="Contact" />
           <button 
             @click="toggleTheme" 
             class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
