@@ -6,6 +6,7 @@
         <div class="flex items-center gap-6">
           <AppHeaderLink to="/" text="Home" />
           <AppHeaderLink to="/projects" text="Projects" />
+          <AppHeaderLink to="/blog" text="Blog" />
           <AppHeaderLink to="/about" text="About" />
           <AppHeaderLink to="/contact" text="Contact" />
           <button 
