@@ -1,6 +1,6 @@
 <template>
-  <NuxtLink 
-    :to="to" 
+  <NuxtLink
+    :to="to"
     class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
   >
     {{ text }}
@@ -8,8 +8,14 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  to: string
-  text: string
-}>()
+defineProps({
+  to: {
+    type: String,
+    required: true,
+  },
+  text: {
+    type: String,
+    required: true,
+  },
+})
 </script>
