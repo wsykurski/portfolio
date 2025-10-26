@@ -22,3 +22,12 @@ logs
 .env
 .env.*
 !.env.example
+
+# Yarn 4
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
