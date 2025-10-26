@@ -11,37 +11,26 @@
       <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
         Web Developer
       </h1>
-      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+      <p class="text-xl md:text-2xl text-gray-600 mb-16">
         Specialized in <span class="font-semibold text-gray-900">Nuxt</span> & <span class="font-semibold text-gray-900">Pinia</span>
       </p>
 
-      <div class="flex flex-wrap gap-4 justify-center mb-16">
-        <button class="px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-          View Projects
-        </button>
-        <button class="px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg border-2 border-gray-900 hover:bg-gray-50 transition-all duration-300">
-          Contact Me
-        </button>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Nuxt Expert</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
+        <ContentSection title="Nuxt Expert" icon="⚡">
           <p class="text-gray-600">Building powerful, SEO-friendly applications with Nuxt 3 & 4</p>
-        </div>
+        </ContentSection>
 
-        <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-          <div class="text-4xl mb-4">🍍</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Pinia Mastery</h3>
+        <ContentSection title="Pinia Mastery" icon="🍍">
           <p class="text-gray-600">State management solutions that scale with your application</p>
-        </div>
+        </ContentSection>
 
-        <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-          <div class="text-4xl mb-4">🚀</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Modern Stack</h3>
+        <ContentSection title="Modern Stack" icon="🚀">
           <p class="text-gray-600">Vue 3, TypeScript, Tailwind CSS, and cutting-edge tools</p>
-        </div>
+        </ContentSection>
+
+        <ContentSection title="View Projects" icon="📁">
+          <p class="text-gray-600">Explore my portfolio of web applications and open source contributions</p>
+        </ContentSection>
       </div>
     </div>
   </div>
