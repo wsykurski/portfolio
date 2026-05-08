@@ -22,16 +22,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  icon: {
-    type: String,
-    required: false,
-  },
-})
+interface Props {
+  title: string
+  icon?: string
+}
+
+const props = defineProps<Props>()
 
 const isIconPath = computed(() => {
   if (!props.icon) return false

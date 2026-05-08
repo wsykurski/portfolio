@@ -1,5 +1,7 @@
 // @ts-check
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
+import vueParser from 'vue-eslint-parser'
+import tsParser from '@typescript-eslint/parser'
 
 export default createConfigForNuxt({
   features: {
@@ -10,6 +12,15 @@ export default createConfigForNuxt({
     },
   },
 }, {
+  files: ['**/*.vue'],
+  languageOptions: {
+    parser: vueParser,
+    parserOptions: {
+      parser: tsParser,
+      extraFileExtensions: ['.vue'],
+      sourceType: 'module',
+    },
+  },
   rules: {
     'vue/no-parsing-error': 'off',
     'vue/multi-word-component-names': 'off',

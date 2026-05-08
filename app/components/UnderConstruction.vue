@@ -22,14 +22,12 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  message: {
-    type: String,
-    default: 'I promise it\'ll be worth the wait... probably 😅',
-  },
+interface Props {
+  title: string
+  message?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  message: 'I promise it\'ll be worth the wait... probably 😅',
 })
 </script>

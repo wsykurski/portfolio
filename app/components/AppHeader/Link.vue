@@ -8,14 +8,10 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  to: {
-    type: String,
-    required: true,
-  },
-  text: {
-    type: String,
-    required: true,
-  },
-})
+interface Props {
+  to: string
+  text: string
+}
+
+defineProps<Props>()
 </script>
