@@ -1,7 +1,44 @@
-/* Dark-only canvas; Tailwind uses class strategy with html.dark from layout */
+/* Semantic palette via html[data-theme]; Tailwind maps rgb(var(--rgb-*) / <alpha-value>) */
+:root,
+[data-theme='dark'] {
+  --rgb-canvas: 11 15 20;
+  --rgb-canvas-soft: 15 22 32;
+  --rgb-surface: 18 26 36;
+  --rgb-surface-elevated: 23 34 49;
+  --rgb-ink: 230 237 246;
+  --rgb-ink-muted: 166 176 190;
+  --rgb-ink-subtle: 125 135 150;
+  --rgb-line: 35 50 70;
+  --rgb-line-soft: 27 39 56;
+  --rgb-accent-olive: 126 143 62;
+  --rgb-accent-khaki: 183 176 122;
+  --rgb-signal-ok: 52 211 153;
+  --rgb-signal-warn: 251 191 36;
+  --rgb-signal-danger: 248 113 113;
+  --shadow-ui: 0 1px 0 0 rgb(255 255 255 / 0.04), 0 18px 40px -24px rgb(0 0 0 / 0.85);
+}
+
+[data-theme='woodland'] {
+  --rgb-canvas: 26 32 24;
+  --rgb-canvas-soft: 34 42 30;
+  --rgb-surface: 42 52 38;
+  --rgb-surface-elevated: 52 64 46;
+  --rgb-ink: 235 232 220;
+  --rgb-ink-muted: 181 175 160;
+  --rgb-ink-subtle: 143 136 120;
+  --rgb-line: 72 86 64;
+  --rgb-line-soft: 58 70 52;
+  --rgb-accent-olive: 138 154 76;
+  --rgb-accent-khaki: 196 184 133;
+  --rgb-signal-ok: 52 211 153;
+  --rgb-signal-warn: 251 191 36;
+  --rgb-signal-danger: 248 113 113;
+  --shadow-ui: 0 1px 0 0 rgb(255 255 255 / 0.03), 0 18px 40px -24px rgb(0 0 0 / 0.72);
+}
+
 html {
   min-height: 100dvh;
-  background-color: #0b0f14;
+  background-color: rgb(var(--rgb-canvas));
   color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,17 +47,17 @@ html {
 body {
   min-height: 100%;
   background-color: inherit;
-  color: #e6edf6;
+  color: rgb(var(--rgb-ink));
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
 ::selection {
-  background: rgba(126, 143, 62, 0.35);
+  background: rgb(var(--rgb-accent-olive) / 0.35);
 }
 
 :focus-visible {
-  outline: 2px solid rgba(126, 143, 62, 0.9);
+  outline: 2px solid rgb(var(--rgb-accent-olive) / 0.9);
   outline-offset: 3px;
 }
 

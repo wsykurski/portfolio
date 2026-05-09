@@ -12,6 +12,16 @@ export default defineNuxtConfig({
   // GitHub Pages project sites live under /<repo>/; set NUXT_APP_BASE_URL in CI (see docs/github-pages.md).
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    head: {
+      script: [
+        {
+          key: 'theme-inline',
+          innerHTML: `(function(){try{var k='portfolio_theme';var t=localStorage.getItem(k);var v=t==='woodland'||t==='dark'?t:'dark';document.documentElement.setAttribute('data-theme',v)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})()`,
+          tagPosition: 'head',
+          tagPriority: 'critical',
+        },
+      ],
+    },
   },
   css: ['~/assets/css/main.css'],
   runtimeConfig: {

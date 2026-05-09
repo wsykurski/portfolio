@@ -6,37 +6,37 @@ export default {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: '#0B0F14',
-          soft: '#0F1620',
+          DEFAULT: 'rgb(var(--rgb-canvas) / <alpha-value>)',
+          soft: 'rgb(var(--rgb-canvas-soft) / <alpha-value>)',
         },
         surface: {
-          DEFAULT: '#121A24',
-          elevated: '#172231',
+          DEFAULT: 'rgb(var(--rgb-surface) / <alpha-value>)',
+          elevated: 'rgb(var(--rgb-surface-elevated) / <alpha-value>)',
         },
         ink: {
-          DEFAULT: '#E6EDF6',
-          muted: '#A6B0BE',
-          subtle: '#7D8796',
+          DEFAULT: 'rgb(var(--rgb-ink) / <alpha-value>)',
+          muted: 'rgb(var(--rgb-ink-muted) / <alpha-value>)',
+          subtle: 'rgb(var(--rgb-ink-subtle) / <alpha-value>)',
         },
         line: {
-          DEFAULT: '#233246',
-          soft: '#1B2738',
+          DEFAULT: 'rgb(var(--rgb-line) / <alpha-value>)',
+          soft: 'rgb(var(--rgb-line-soft) / <alpha-value>)',
         },
         accent: {
-          olive: '#7E8F3E',
-          khaki: '#B7B07A',
+          olive: 'rgb(var(--rgb-accent-olive) / <alpha-value>)',
+          khaki: 'rgb(var(--rgb-accent-khaki) / <alpha-value>)',
         },
         signal: {
-          ok: '#34D399',
-          warn: '#FBBF24',
-          danger: '#F87171',
+          ok: 'rgb(var(--rgb-signal-ok) / <alpha-value>)',
+          warn: 'rgb(var(--rgb-signal-warn) / <alpha-value>)',
+          danger: 'rgb(var(--rgb-signal-danger) / <alpha-value>)',
         },
       },
       borderRadius: {
         ui: '0.75rem',
       },
       boxShadow: {
-        ui: '0 1px 0 0 rgba(255,255,255,0.04), 0 18px 40px -24px rgba(0,0,0,0.85)',
+        ui: 'var(--shadow-ui)',
       },
       letterSpacing: {
         tactical: '0.08em',

@@ -30,14 +30,16 @@ const onSkipToMain = () => {
   })
 }
 const i18nHead = useLocaleHead()
+const { theme } = useAppTheme()
 
 useHead(() => {
   const baseAttrs = i18nHead.value.htmlAttrs ?? {}
-  const mergedClass = ['dark', baseAttrs.class].flat().filter(Boolean).join(' ')
+  const mergedClass = [baseAttrs.class].flat().filter(Boolean).join(' ')
   return {
     htmlAttrs: {
       ...baseAttrs,
-      class: mergedClass,
+      'class': mergedClass || undefined,
+      'data-theme': theme.value,
     },
     link: i18nHead.value.link,
     meta: i18nHead.value.meta,
