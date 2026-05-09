@@ -1,8 +1,11 @@
 <template>
-  <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+  <UiCard
+    hoverable
+    class-name="h-full"
+  >
     <div
       v-if="icon"
-      class="text-4xl mb-4"
+      class="text-4xl mb-4 text-ink"
     >
       <img
         v-if="isIconPath"
@@ -12,11 +15,13 @@
       >
       <span v-else>{{ icon }}</span>
     </div>
-    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+    <h3 class="text-xl font-bold text-ink mb-2">
       {{ title }}
     </h3>
-    <slot />
-  </div>
+    <div class="text-ink-muted">
+      <slot />
+    </div>
+  </UiCard>
 </template>
 
 <script setup lang="ts">
