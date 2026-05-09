@@ -142,7 +142,5 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useSeoMeta({
-  title: computed(() => t('seo.titleHome')),
-})
+usePageSeoTitle('seo.titleHome')
 </script>

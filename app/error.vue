@@ -47,9 +47,7 @@ const detail = computed(() => {
   return statusCode.value === 404 ? t('error.notFoundMessage') : t('error.genericMessage')
 })
 
-useSeoMeta({
-  title: computed(() => t('seo.titleError')),
-})
+usePageSeoTitle('seo.titleError')
 
 function clearAndGoHome() {
   clearError({ redirect: '/' })
