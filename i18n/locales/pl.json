@@ -26,7 +26,8 @@
     "titleHome": "Briefing",
     "titleProjects": "Projekty",
     "titleAbout": "O mnie",
-    "titleContact": "Kontakt"
+    "titleContact": "Kontakt",
+    "titleError": "Błąd"
   },
   "home": {
     "sectionEyebrow": "OPERACJE",
@@ -57,6 +58,12 @@
     "capStackBody": "Vue 3, TypeScript, Tailwind CSS i pragmatyczne narzędzia.",
     "capDeliveryTitle": "Realizacja",
     "capDeliveryBody": "Projekty i wkłady skupione na utrzymaniu i efekcie końcowym."
+  },
+  "error": {
+    "notFoundTitle": "Nie znaleziono strony",
+    "notFoundMessage": "Żądana strona nie istnieje lub została przeniesiona.",
+    "genericTitle": "Coś poszło nie tak",
+    "genericMessage": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie lub wróć na start."
   },
   "underConstruction": {
     "badge": "Robocze",

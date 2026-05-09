@@ -3,8 +3,6 @@ export default {
   darkMode: 'class',
   content: [
     './app/**/*.{vue,js,ts}',
-    './app.vue',
-    './error.vue',
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
