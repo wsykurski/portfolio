@@ -10,6 +10,19 @@ const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8')) as { version: string }
 
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/test-utils/module'],
+  // Icons live under components/icons/: register by filename only (IconThemeMoon),
+  // not IconsIconThemeMoon — exclude this folder from the default ~/components scan.
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: true,
+      ignore: ['**/icons/**'],
+    },
+    {
+      path: '~/components/icons',
+      pathPrefix: false,
+    },
+  ],
   devtools: { enabled: true },
   // GitHub Pages project sites live under /<repo>/; set NUXT_APP_BASE_URL in CI (see docs/github-pages.md).
   app: {

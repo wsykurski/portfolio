@@ -76,39 +76,8 @@
                   :key="themeToggleIconKey"
                   class="inline-flex items-center justify-center"
                 >
-                  <svg
-                    v-if="showDarkThemeIcon"
-                    class="size-5 shrink-0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.4a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l2.3 3.3a1 1 0 0 1-.7 1.7h-.4z"
-                    />
-                    <path d="M12 22v-3" />
-                  </svg>
-                  <svg
-                    v-else
-                    class="size-5 shrink-0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-                    />
-                  </svg>
+                  <IconThemeWoodland v-if="showDarkThemeIcon" />
+                  <IconThemeMoon v-else />
                 </span>
               </ClientOnly>
             </UiButton>
