@@ -12,8 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 type Variant = 'neutral' | 'olive' | 'ok' | 'warn' | 'danger'
 
 interface Props {

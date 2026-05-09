@@ -1,13 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
-  content: [
-    './app/**/*.{vue,js,ts}',
-    './app.vue',
-    './error.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
+  content: ['./app/**/*.{vue,js,ts}', './nuxt.config.{js,ts}'],
   theme: {
     extend: {
       colors: {

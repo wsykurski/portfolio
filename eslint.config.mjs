@@ -22,7 +22,6 @@ export default createConfigForNuxt({
     },
   },
   rules: {
-    'vue/no-parsing-error': 'off',
     'vue/multi-word-component-names': 'off',
   },
 })

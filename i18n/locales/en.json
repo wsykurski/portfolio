@@ -26,7 +26,8 @@
     "titleHome": "Mission brief",
     "titleProjects": "Projects",
     "titleAbout": "About",
-    "titleContact": "Contact"
+    "titleContact": "Contact",
+    "titleError": "Error"
   },
   "home": {
     "sectionEyebrow": "OPERATIONS",
@@ -58,7 +59,14 @@
     "capDeliveryTitle": "Delivery",
     "capDeliveryBody": "Projects and contributions focused on maintainability and outcome."
   },
+  "error": {
+    "notFoundTitle": "Page not found",
+    "notFoundMessage": "The page you requested does not exist or has moved.",
+    "genericTitle": "Something went wrong",
+    "genericMessage": "An unexpected error occurred. Please try again or return home."
+  },
   "underConstruction": {
+    "badge": "WIP",
     "body": "This section is not deployed yet.",
     "back": "Back to home",
     "projects": "Showcase in preparation.",

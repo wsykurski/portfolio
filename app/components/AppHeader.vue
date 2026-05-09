@@ -53,8 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from '#imports'
-
 const { t, locale, setLocale } = useI18n()
 
 const localeButtonClass = (code: string) => {
