@@ -30,7 +30,6 @@ const onSkipToMain = () => {
   })
 }
 const i18nHead = useLocaleHead()
-const { theme } = useAppTheme()
 
 useHead(() => {
   const baseAttrs = i18nHead.value.htmlAttrs ?? {}
@@ -38,8 +37,11 @@ useHead(() => {
   return {
     htmlAttrs: {
       ...baseAttrs,
-      'class': mergedClass || undefined,
-      'data-theme': theme.value,
+      class: mergedClass || undefined,
+      // Do not set data-theme here: useHead/Unhead can patch <html> after the
+      // critical inline script + theme plugin, forcing stale SSR payload ('dark')
+      // onto the document and breaking the header toggle icon until click.
+      // Theme on <html> is owned by buildThemeHeadInlineScript, theme-init, applyDom.
     },
     link: i18nHead.value.link,
     meta: i18nHead.value.meta,
