@@ -7,7 +7,7 @@ const pkgPath = join(dirname(fileURLToPath(import.meta.url)), 'package.json')
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8')) as { version: string }
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/test-utils/module'],
   devtools: { enabled: true },
   // GitHub Pages project sites live under /<repo>/; set NUXT_APP_BASE_URL in CI (see docs/github-pages.md).
   app: {

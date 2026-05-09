@@ -12,6 +12,17 @@ export default createConfigForNuxt({
     },
   },
 }, {
+  files: ['test/**/*.{ts,vue}'],
+  languageOptions: {
+    globals: {
+      describe: 'readonly',
+      it: 'readonly',
+      expect: 'readonly',
+      beforeEach: 'readonly',
+      vi: 'readonly',
+    },
+  },
+}, {
   files: ['**/*.vue'],
   languageOptions: {
     parser: vueParser,

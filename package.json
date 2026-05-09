@@ -11,7 +11,9 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^10.3.0",
@@ -21,12 +23,16 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.9.0",
+    "@nuxt/test-utils": "^4.0.3",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@types/node": "^25.6.2",
     "@typescript-eslint/parser": "^8.59.2",
+    "@vue/test-utils": "^2.4.10",
     "eslint": "^9.38.0",
+    "happy-dom": "^20.9.0",
     "typescript": "^5.8.0",
     "typescript-eslint": "^8.46.2",
+    "vitest": "^4.1.5",
     "vue-eslint-parser": "^10.4.0"
   },
   "packageManager": "yarn@4.10.3"
