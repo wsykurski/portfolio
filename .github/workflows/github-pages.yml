@@ -1,9 +1,8 @@
 name: Deploy static site to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
   workflow_dispatch:
 
 permissions:
@@ -20,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Published release: build exactly the tagged tree. Manual run: selected branch/commit SHA.
+          ref: ${{ github.event_name == 'release' && github.event.release.tag_name || github.sha }}
 
       - uses: actions/setup-node@v4
         with:
