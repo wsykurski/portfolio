@@ -17,6 +17,10 @@
     "switchToPl": "Przełącz język na polski",
     "switchToEn": "Przełącz język na angielski"
   },
+  "theme": {
+    "switchToDark": "Przełącz na motyw nocny",
+    "switchToWoodland": "Przełącz na motyw leśny"
+  },
   "a11y": {
     "skipToContent": "Przejdź do treści"
   },

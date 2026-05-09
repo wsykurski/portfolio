@@ -17,6 +17,10 @@
     "switchToPl": "Switch language to Polish",
     "switchToEn": "Switch language to English"
   },
+  "theme": {
+    "switchToDark": "Switch to night theme",
+    "switchToWoodland": "Switch to woodland theme"
+  },
   "a11y": {
     "skipToContent": "Skip to main content"
   },
