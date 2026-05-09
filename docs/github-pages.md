@@ -87,6 +87,18 @@ npx serve .output/public
 | Workflow does not run after merge | Expected: deploy is tied to **published Releases**, not pushes to `main`. Publish a Release (or use **Run workflow**). |
 | Site did not update after tagging only | Tags alone do not trigger this workflow; **publish** the Release on GitHub. |
 | “Environment `github-pages`” approval | First deploy may require approving the **github-pages** environment once (org/repo policies). |
+| `Tag "v…" is not allowed to deploy to github-pages due to environment protection rules` | The **github-pages** environment only allows certain refs. Allow release tags under **Settings → Environments → github-pages → Deployment branches and tags** (see below). |
+
+### Allow version tags on the `github-pages` environment
+
+Release workflows check out a **tag** (`refs/tags/v1.x.x`). If the environment was limited to **`main`**, tag-triggered runs are blocked.
+
+1. Repo → **Settings** → **Environments** → **github-pages**.
+2. **Deployment branches and tags** → **Add deployment branch or tag rule**.
+3. Add a **tag** rule that matches your releases, e.g. **`v*.*.*`** (or **`v*`**), or temporarily choose **All branches and tags** if acceptable for this repo.
+4. Save, then **re-run** the failed workflow or publish the Release again.
+
+Docs: [Deployment branches and tags](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-branches-and-tags).
 
 ---
 
