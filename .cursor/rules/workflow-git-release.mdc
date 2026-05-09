@@ -1,0 +1,30 @@
+---
+description: >-
+  Git branches, PRs (wait for user GtG before squash merge), semver bumps,
+  GitHub releases from tags on main, verify Pages deploy after release
+alwaysApply: false
+---
+
+# Git, PR, and release workflow
+
+## Branches
+
+- Use dedicated branches for non-trivial work (e.g. `feat/*`, `fix/*`) branched from **`main`**.
+
+## Pull requests
+
+- Open PRs targeting **`main`**.
+- **After creating a PR, do not squash merge until the user explicitly approves or says it is good to go (GtG).** Wait for that signal; treat silence as “hold.”
+- When merging with user approval, prefer **squash merge** unless they ask for a different merge strategy.
+
+## GitHub releases
+
+The agent **may** create GitHub releases when the user asks for a release or agrees to complete the release steps.
+
+- Releases **must be based on git tags** (e.g. `v1.3.0`). Flow: ensure **`package.json`** version matches intent, commit on **`main`** if needed, push **`main`**, then create the release **for that tag** (create tag if missing, then publish release pointing at it—never a “release” that skips a concrete tag).
+- **Cut releases from `main`** unless the user explicitly directs otherwise (hotfix branch, cherry-pick scenario, etc.).
+- **After publishing a release**, wait enough time for Actions to start (on the order of **30–90 seconds** unless the user specifies otherwise), then **check that the deployment workflow was triggered** (e.g. `gh run list --workflow=github-pages.yml --limit 5` or the Actions UI for this repo). Report whether the run for that release/tag appears and whether it **succeeded**; if it failed or did not trigger, say so clearly.
+
+## Versioning
+
+- Bump **`package.json`** version on **`main`** as part of preparing a release; align semver with the change set (patch/minor/major) per user preference when stated.
