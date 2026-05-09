@@ -63,6 +63,8 @@
 </template>
 
 <script setup lang="ts">
+import { useColorMode, useI18n } from '#imports'
+
 const colorMode = useColorMode()
 const { t, locale, setLocale } = useI18n()
 
