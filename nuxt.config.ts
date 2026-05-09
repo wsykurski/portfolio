@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2026-05-09',
   i18n: {
     locales: [
       { code: 'en', language: 'en-US', name: 'EN', file: 'en.json' },

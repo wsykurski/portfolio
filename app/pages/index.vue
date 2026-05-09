@@ -142,7 +142,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useHead(() => ({
-  title: t('seo.titleHome'),
-}))
+useSeoMeta({
+  title: computed(() => t('seo.titleHome')),
+})
 </script>

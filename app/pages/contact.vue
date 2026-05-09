@@ -8,7 +8,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useHead(() => ({
-  title: t('seo.titleContact'),
-}))
+useSeoMeta({
+  title: computed(() => t('seo.titleContact')),
+})
 </script>
