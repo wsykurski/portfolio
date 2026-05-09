@@ -6,8 +6,7 @@
     "contact": "Kontakt"
   },
   "brand": {
-    "name": "Portfolio",
-    "version": "v0"
+    "name": "Portfolio"
   },
   "footer": {
     "line": "© {year} Portfolio · Nuxt 4 · Tailwind CSS"

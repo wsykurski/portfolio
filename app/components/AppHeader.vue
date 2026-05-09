@@ -7,7 +7,7 @@
           class="inline-flex items-baseline gap-2 font-bold text-ink"
         >
           <span class="text-lg md:text-xl uppercase tracking-tactical">{{ t('brand.name') }}</span>
-          <span class="text-xs text-ink-subtle uppercase tracking-tactical">{{ t('brand.version') }}</span>
+          <span class="text-xs text-ink-subtle uppercase tracking-tactical">{{ appVersion }}</span>
         </NuxtLink>
         <div class="flex flex-wrap items-center justify-end gap-3 md:gap-6">
           <AppHeaderLink
@@ -54,6 +54,7 @@
 
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n()
+const appVersion = useRuntimeConfig().public.appVersion
 
 const localeButtonClass = (code: string) => {
   const base = 'px-2 py-1 min-w-10'
