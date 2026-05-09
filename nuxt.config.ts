@@ -1,4 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const pkgPath = join(dirname(fileURLToPath(import.meta.url)), 'package.json')
+const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8')) as { version: string }
+
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   devtools: { enabled: true },
@@ -7,6 +14,11 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
   },
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      appVersion: `v${pkg.version}`,
+    },
+  },
   compatibilityDate: '2026-05-09',
   i18n: {
     locales: [
