@@ -5,7 +5,7 @@
         variant="warn"
         class-name="mx-auto"
       >
-        WIP
+        {{ t('underConstruction.badge') }}
       </UiBadge>
       <h1 class="mt-6 text-3xl md:text-4xl font-bold text-ink">
         {{ title }}

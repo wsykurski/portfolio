@@ -59,6 +59,7 @@
     "capDeliveryBody": "Projekty i wkłady skupione na utrzymaniu i efekcie końcowym."
   },
   "underConstruction": {
+    "badge": "Robocze",
     "body": "Sekcja jeszcze nie wdrożona.",
     "back": "Powrót na start",
     "projects": "Witryna projektów w przygotowaniu.",

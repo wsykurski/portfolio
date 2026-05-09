@@ -59,6 +59,7 @@
     "capDeliveryBody": "Projects and contributions focused on maintainability and outcome."
   },
   "underConstruction": {
+    "badge": "WIP",
     "body": "This section is not deployed yet.",
     "back": "Back to home",
     "projects": "Showcase in preparation.",
