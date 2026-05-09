@@ -1,0 +1,58 @@
+---
+description: Core Nuxt 4 + Vue 3 coding standards for this project
+alwaysApply: true
+---
+
+# Nuxt 4 + Vue 3 Standards
+
+Follow the official [Nuxt 4 docs](https://nuxt.com/docs) and Vue 3 best practices. Keep code simple and readable.
+
+## Components
+
+- Always use `<script setup lang="ts">` — never the Options API.
+- Type props/emits with `defineProps<...>()` / `defineEmits<...>()`.
+- Prefer single-responsibility components; extract logic into composables.
+
+```vue
+<!-- ✅ GOOD -->
+<script setup lang="ts">
+const props = defineProps<{ title: string }>()
+const { count, increment } = useCounter()
+</script>
+
+<!-- ❌ BAD: Options API -->
+<script lang="ts">
+export default { data() { return { count: 0 } } }
+</script>
+```
+
+## Composables
+
+- Reusable logic goes in `app/composables/` as `useXxx.ts`.
+- Auto-imported by Nuxt — do not import manually.
+- Return refs/computed/methods as a plain object.
+
+```ts
+// app/composables/useCounter.ts
+export const useCounter = () => {
+  const count = ref(0)
+  const increment = () => count.value++
+  return { count, increment }
+}
+```
+
+## State Management
+
+- Prefer composables + `useState()` for shared state (Nuxt's SSR-safe ref).
+- Use Pinia stores **only if `pinia` / `@pinia/nuxt` is installed** in `package.json`. Otherwise stick with composables.
+
+## TypeScript
+
+- Strict typing — avoid `any`. Use `unknown` + narrowing when needed.
+- Type API responses via generics on `$fetch<T>()` / `useFetch<T>()`.
+
+## Nuxt Conventions
+
+- Use built-ins: `useFetch`, `useAsyncData`, `useRoute`, `useRuntimeConfig`, `navigateTo`.
+- Pages live in `app/pages/`, layouts in `app/layouts/`, components in `app/components/`.
+- Rely on auto-imports for composables and components — keep imports minimal.
