@@ -32,8 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from '#imports'
-
 interface Props {
   title: string
   message?: string

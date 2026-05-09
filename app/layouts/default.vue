@@ -22,9 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick } from 'vue'
-import { useHead, useI18n, useLocaleHead } from '#imports'
-
 const { t } = useI18n()
 
 const onSkipToMain = () => {
