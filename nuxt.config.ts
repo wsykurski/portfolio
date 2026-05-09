@@ -3,6 +3,8 @@ import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { buildThemeHeadInlineScript } from './app/utils/appTheme'
+
 const pkgPath = join(dirname(fileURLToPath(import.meta.url)), 'package.json')
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8')) as { version: string }
 
@@ -16,7 +18,7 @@ export default defineNuxtConfig({
       script: [
         {
           key: 'theme-inline',
-          innerHTML: `(function(){try{var k='portfolio_theme';var t=localStorage.getItem(k);var v=t==='woodland'||t==='dark'?t:'dark';document.documentElement.setAttribute('data-theme',v)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})()`,
+          innerHTML: buildThemeHeadInlineScript(),
           tagPosition: 'head',
           tagPriority: 'critical',
         },
