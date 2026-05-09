@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   devtools: { enabled: true },
+  // GitHub Pages project sites live under /<repo>/; set NUXT_APP_BASE_URL in CI (see docs/github-pages.md).
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+  },
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2026-05-09',
   i18n: {
@@ -11,6 +15,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     langDir: 'locales',
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,

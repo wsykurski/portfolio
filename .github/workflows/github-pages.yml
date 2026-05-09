@@ -1,0 +1,64 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Configure base URL for GitHub Pages
+        shell: bash
+        run: |
+          REPO="${GITHUB_REPOSITORY##*/}"
+          OWNER="${GITHUB_REPOSITORY%%/*}"
+          if [[ "$REPO" == *.github.io ]]; then
+            echo "NUXT_APP_BASE_URL=/" >> "$GITHUB_ENV"
+            echo "NUXT_PUBLIC_SITE_URL=https://${OWNER}.github.io/" >> "$GITHUB_ENV"
+          else
+            echo "NUXT_APP_BASE_URL=/${REPO}/" >> "$GITHUB_ENV"
+            echo "NUXT_PUBLIC_SITE_URL=https://${OWNER}.github.io/${REPO}/" >> "$GITHUB_ENV"
+          fi
+
+      - name: Generate static site
+        run: yarn generate
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

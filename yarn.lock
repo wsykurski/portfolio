@@ -3114,6 +3114,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^25.6.2":
+  version: 25.6.2
+  resolution: "@types/node@npm:25.6.2"
+  dependencies:
+    undici-types: "npm:~7.19.0"
+  checksum: 10c0/7f540331aa3ab88c285aeaf2eb43e3992f54f0cdb7f3593d156af67b199d4eaf56590fa1c310a00aa58ff69dba668cb3915a157fe83cd6b40a73bb338a12f09a
+  languageName: node
+  linkType: hard
+
 "@types/parse-path@npm:^7.0.0":
   version: 7.1.0
   resolution: "@types/parse-path@npm:7.1.0"
@@ -9176,6 +9185,7 @@ __metadata:
     "@nuxt/eslint": "npm:^1.9.0"
     "@nuxtjs/i18n": "npm:^10.3.0"
     "@nuxtjs/tailwindcss": "npm:^6.14.0"
+    "@types/node": "npm:^25.6.2"
     "@typescript-eslint/parser": "npm:^8.59.2"
     eslint: "npm:^9.38.0"
     nuxt: "npm:^4.2.0"
@@ -11021,6 +11031,13 @@ __metadata:
     magic-string: "npm:^0.30.21"
     unplugin: "npm:^2.3.11"
   checksum: 10c0/007bf517866a1f523aff1821ee6380f964e0eb327b3499616fe4d02bbb0b08d8295627e78cacc2218e9f352f0faf0f25ac1993d66fedbb6a53b9d8bf699fed20
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~7.19.0":
+  version: 7.19.2
+  resolution: "undici-types@npm:7.19.2"
+  checksum: 10c0/7159f10546f9f6c47d36776bb1bbf8671e87c1e587a6fee84ae1f111ae8de4f914efa8ca0dfcd224f4f4a9dfc3f6028f627ccb5ddaccf82d7fd54671b89fac3e
   languageName: node
   linkType: hard
 
