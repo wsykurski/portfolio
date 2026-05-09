@@ -1,26 +1,18 @@
-/* Root canvas: prevents white flashes on overscroll / rubber-banding in dark mode */
+/* Dark-only canvas; Tailwind uses class strategy with html.dark from layout */
 html {
   min-height: 100dvh;
-  background-color: #f8fafc;
-  color-scheme: light dark;
+  background-color: #0b0f14;
+  color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html.dark {
-  background-color: #0b0f14;
 }
 
 body {
   min-height: 100%;
   background-color: inherit;
-  color: #0b0f14;
+  color: #e6edf6;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
-}
-
-html.dark body {
-  color: #e6edf6;
 }
 
 ::selection {

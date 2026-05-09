@@ -1681,7 +1681,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:^3.13.2, @nuxt/kit@npm:^3.15.4, @nuxt/kit@npm:^3.16.0, @nuxt/kit@npm:^3.19.2":
+"@nuxt/kit@npm:^3.15.4, @nuxt/kit@npm:^3.16.0, @nuxt/kit@npm:^3.19.2":
   version: 3.19.3
   resolution: "@nuxt/kit@npm:3.19.3"
   dependencies:
@@ -1853,18 +1853,6 @@ __metadata:
     rolldown:
       optional: true
   checksum: 10c0/e558e5ae1bbc903b39a6f03b1f816ae17cd5c40cf13ee1da75b8d5fd3c90c2d15d4c62942184582838d1231ec23b14fad72006f36f4504abe3ac14a72660247f
-  languageName: node
-  linkType: hard
-
-"@nuxtjs/color-mode@npm:^3.5.2":
-  version: 3.5.2
-  resolution: "@nuxtjs/color-mode@npm:3.5.2"
-  dependencies:
-    "@nuxt/kit": "npm:^3.13.2"
-    pathe: "npm:^1.1.2"
-    pkg-types: "npm:^1.2.1"
-    semver: "npm:^7.6.3"
-  checksum: 10c0/81b19c3ab82b9eeb8909666ba9c0ce714a51e481515269e71efe000e915b07ab228c989b045b889a925a63b5ad696a53f13ac9f676a76c58df85177fa1321aca
   languageName: node
   linkType: hard
 
@@ -9131,7 +9119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-types@npm:^1.2.1, pkg-types@npm:^1.3.1":
+"pkg-types@npm:^1.3.1":
   version: 1.3.1
   resolution: "pkg-types@npm:1.3.1"
   dependencies:
@@ -9186,7 +9174,6 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@nuxt/eslint": "npm:^1.9.0"
-    "@nuxtjs/color-mode": "npm:^3.5.2"
     "@nuxtjs/i18n": "npm:^10.3.0"
     "@nuxtjs/tailwindcss": "npm:^6.14.0"
     "@typescript-eslint/parser": "npm:^8.59.2"

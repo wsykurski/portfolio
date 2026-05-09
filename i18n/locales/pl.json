@@ -12,12 +12,6 @@
   "footer": {
     "line": "© {year} Portfolio · Nuxt 4 · Tailwind CSS"
   },
-  "theme": {
-    "light": "Jasny",
-    "dark": "Ciemny",
-    "switchToLight": "Przełącz na tryb jasny",
-    "switchToDark": "Przełącz na tryb ciemny"
-  },
   "locale": {
     "pl": "Polski",
     "en": "Angielski",

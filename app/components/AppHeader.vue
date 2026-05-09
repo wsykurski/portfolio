@@ -1,13 +1,13 @@
 <template>
-  <header class="sticky top-0 z-50 border-b border-slate-200 dark:border-line/80 bg-white/70 dark:bg-canvas-soft/40 backdrop-blur">
+  <header class="sticky top-0 z-50 border-b border-line/80 bg-canvas-soft/40 backdrop-blur">
     <div class="container mx-auto px-6 py-4">
       <nav class="flex flex-wrap items-center justify-between gap-4">
         <NuxtLink
           to="/"
-          class="inline-flex items-baseline gap-2 font-bold text-slate-900 dark:text-ink"
+          class="inline-flex items-baseline gap-2 font-bold text-ink"
         >
           <span class="text-lg md:text-xl uppercase tracking-tactical">{{ t('brand.name') }}</span>
-          <span class="text-xs text-slate-500 dark:text-ink-subtle uppercase tracking-tactical">{{ t('brand.version') }}</span>
+          <span class="text-xs text-ink-subtle uppercase tracking-tactical">{{ t('brand.version') }}</span>
         </NuxtLink>
         <div class="flex flex-wrap items-center justify-end gap-3 md:gap-6">
           <AppHeaderLink
@@ -46,16 +46,6 @@
               <span class="text-xs md:text-sm">EN</span>
             </UiButton>
           </div>
-          <UiButton
-            variant="ghost"
-            class-name="px-3 py-2"
-            :aria-label="colorMode.value === 'dark' ? t('theme.switchToLight') : t('theme.switchToDark')"
-            @click="toggleTheme"
-          >
-            <span class="text-xs md:text-sm">
-              {{ colorMode.value === 'dark' ? t('theme.light') : t('theme.dark') }}
-            </span>
-          </UiButton>
         </div>
       </nav>
     </div>
@@ -63,14 +53,9 @@
 </template>
 
 <script setup lang="ts">
-import { useColorMode, useI18n } from '#imports'
+import { useI18n } from '#imports'
 
-const colorMode = useColorMode()
 const { t, locale, setLocale } = useI18n()
-
-const toggleTheme = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-}
 
 const localeButtonClass = (code: string) => {
   const base = 'px-2 py-1 min-w-10'
