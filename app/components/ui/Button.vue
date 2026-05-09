@@ -21,6 +21,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed, resolveComponent } from 'vue'
+
 type Variant = 'primary' | 'ghost' | 'danger'
 
 interface Props {
