@@ -1,0 +1,16 @@
+/* Root canvas: prevents white flashes on overscroll / rubber-banding in dark mode */
+html {
+  min-height: 100dvh;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark {
+  background-color: #111827;
+}
+
+body {
+  min-height: 100%;
+  background-color: inherit;
+}
