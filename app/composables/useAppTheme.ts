@@ -1,7 +1,5 @@
-export type AppTheme = 'dark' | 'woodland'
-
-/** Keep in sync with inline script in nuxt.config.ts app.head */
-export const THEME_STORAGE_KEY = 'portfolio_theme'
+import type { AppTheme } from '~/utils/appTheme'
+import { THEME_STORAGE_KEY } from '~/utils/appTheme'
 
 export function useAppTheme() {
   const theme = useState<AppTheme>('app-theme', () => 'dark')

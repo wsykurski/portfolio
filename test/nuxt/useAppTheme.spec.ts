@@ -1,8 +1,8 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { defineComponent, h } from 'vue'
 import { describe, expect, it, vi, beforeEach } from 'vitest'
-import type { AppTheme } from '~/composables/useAppTheme'
-import { THEME_STORAGE_KEY } from '~/composables/useAppTheme'
+import type { AppTheme } from '~/utils/appTheme'
+import { THEME_STORAGE_KEY } from '~/utils/appTheme'
 
 type HarnessVm = {
   setTheme: (value: AppTheme) => void
