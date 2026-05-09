@@ -1,6 +1,16 @@
 <template>
   <UnderConstruction
-    title="Projects"
-    message="Currently coding the showcase... it's almost pixel-perfect! 🎨"
+    :title="t('nav.projects')"
+    :message="t('underConstruction.projects')"
   />
 </template>
+
+<script setup lang="ts">
+import { useHead, useI18n } from '#imports'
+
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('seo.titleProjects'),
+}))
+</script>

@@ -1,33 +1,45 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-[60vh] px-6 text-center">
-    <div class="text-8xl mb-6">
-      🚧
-    </div>
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-      {{ title }}
-    </h1>
-    <p class="text-xl text-gray-600 dark:text-gray-300 mb-2">
-      This page is still under construction
-    </p>
-    <p class="text-lg text-gray-500 dark:text-gray-400 italic">
-      {{ message }}
-    </p>
-    <NuxtLink
-      to="/"
-      class="mt-8 px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-    >
-      Back to Home
-    </NuxtLink>
+  <div class="flex flex-col items-center justify-center min-h-[60vh] px-6 py-12">
+    <UiCard class-name="max-w-lg w-full text-center">
+      <UiBadge
+        variant="warn"
+        class-name="mx-auto"
+      >
+        WIP
+      </UiBadge>
+      <h1 class="mt-6 text-3xl md:text-4xl font-bold text-ink">
+        {{ title }}
+      </h1>
+      <p class="mt-4 text-ink-muted">
+        {{ t('underConstruction.body') }}
+      </p>
+      <p
+        v-if="message"
+        class="mt-3 text-sm text-ink-subtle"
+      >
+        {{ message }}
+      </p>
+      <div class="mt-8 flex justify-center">
+        <UiButton
+          to="/"
+          variant="primary"
+        >
+          {{ t('underConstruction.back') }}
+        </UiButton>
+      </div>
+    </UiCard>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from '#imports'
+
 interface Props {
   title: string
   message?: string
 }
 
-withDefaults(defineProps<Props>(), {
-  message: 'I promise it\'ll be worth the wait... probably 😅',
-})
+defineProps<Props>()
+
+const { t } = useI18n()
 </script>

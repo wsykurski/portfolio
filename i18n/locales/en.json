@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "brand": {
+    "name": "Portfolio",
+    "version": "v0"
+  },
+  "footer": {
+    "line": "© {year} Portfolio · Nuxt 4 · Tailwind CSS"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "locale": {
+    "pl": "Polish",
+    "en": "English",
+    "switchToPl": "Switch language to Polish",
+    "switchToEn": "Switch language to English"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content"
+  },
+  "seo": {
+    "titleDefault": "Portfolio",
+    "titleHome": "Mission brief",
+    "titleProjects": "Projects",
+    "titleAbout": "About",
+    "titleContact": "Contact"
+  },
+  "home": {
+    "sectionEyebrow": "OPERATIONS",
+    "sectionTitle": "MISSION BRIEF",
+    "sectionSubtitle": "Objective: deliver reliable, maintainable web systems. Stack focus: Nuxt, Vue, TypeScript.",
+    "statusOperational": "OPERATIONAL",
+    "role": "Role",
+    "headline": "Web Developer",
+    "lead": "Specialized in Nuxt and scalable state management. Built for performance, clarity, and long-term maintenance.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact",
+    "statStack": "Stack",
+    "statStackValue": "Nuxt · Vue · TS",
+    "statMode": "Mode",
+    "statModeValue": "SSR / SPA / Static",
+    "statPriority": "Priority",
+    "statPriorityValue": "Quality and delivery",
+    "statusLabel": "Status",
+    "tagNuxt": "Nuxt_4",
+    "tagTailwind": "Tailwind",
+    "tagTs": "TypeScript",
+    "statusBlurb": "Clear interfaces. Predictable state. Tactical UI. No noise.",
+    "capNuxtTitle": "Nuxt",
+    "capNuxtBody": "SEO-friendly delivery, SSR-first patterns, and clean routing and layouts.",
+    "capStateTitle": "State",
+    "capStateBody": "Scalable state patterns and composables aligned with Nuxt conventions.",
+    "capStackTitle": "Stack",
+    "capStackBody": "Vue 3, TypeScript, Tailwind CSS, and pragmatic tooling.",
+    "capDeliveryTitle": "Delivery",
+    "capDeliveryBody": "Projects and contributions focused on maintainability and outcome."
+  },
+  "underConstruction": {
+    "body": "This section is not deployed yet.",
+    "back": "Back to home",
+    "projects": "Showcase in preparation.",
+    "about": "Profile narrative in draft.",
+    "contact": "Contact channel configuration pending."
+  }
+}

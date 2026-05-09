@@ -1,16 +1,44 @@
 /* Root canvas: prevents white flashes on overscroll / rubber-banding in dark mode */
 html {
   min-height: 100dvh;
-  background-color: #fff;
+  background-color: #f8fafc;
+  color-scheme: light dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html.dark {
-  background-color: #111827;
+  background-color: #0b0f14;
 }
 
 body {
   min-height: 100%;
   background-color: inherit;
+  color: #0b0f14;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+html.dark body {
+  color: #e6edf6;
+}
+
+::selection {
+  background: rgba(126, 143, 62, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(126, 143, 62, 0.9);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

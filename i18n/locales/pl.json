@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Start",
+    "projects": "Projekty",
+    "about": "O mnie",
+    "contact": "Kontakt"
+  },
+  "brand": {
+    "name": "Portfolio",
+    "version": "v0"
+  },
+  "footer": {
+    "line": "© {year} Portfolio · Nuxt 4 · Tailwind CSS"
+  },
+  "theme": {
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "switchToLight": "Przełącz na tryb jasny",
+    "switchToDark": "Przełącz na tryb ciemny"
+  },
+  "locale": {
+    "pl": "Polski",
+    "en": "Angielski",
+    "switchToPl": "Przełącz język na polski",
+    "switchToEn": "Przełącz język na angielski"
+  },
+  "a11y": {
+    "skipToContent": "Przejdź do treści"
+  },
+  "seo": {
+    "titleDefault": "Portfolio",
+    "titleHome": "Briefing",
+    "titleProjects": "Projekty",
+    "titleAbout": "O mnie",
+    "titleContact": "Kontakt"
+  },
+  "home": {
+    "sectionEyebrow": "OPERACJE",
+    "sectionTitle": "BRIEFING",
+    "sectionSubtitle": "Cel: dostarczać niezawodne, utrzymywalne systemy web. Skład: Nuxt, Vue, TypeScript.",
+    "statusOperational": "GOTOWY",
+    "role": "Funkcja",
+    "headline": "Web Developer",
+    "lead": "Specjalizacja: Nuxt i skalowalny stan aplikacji. Priorytet: wydajność, czytelność, długoterminowe utrzymanie.",
+    "ctaProjects": "Projekty",
+    "ctaContact": "Kontakt",
+    "statStack": "Stack",
+    "statStackValue": "Nuxt · Vue · TS",
+    "statMode": "Tryb",
+    "statModeValue": "SSR / SPA / statyczny",
+    "statPriority": "Priorytet",
+    "statPriorityValue": "Jakość i dostawa",
+    "statusLabel": "Status",
+    "tagNuxt": "Nuxt_4",
+    "tagTailwind": "Tailwind",
+    "tagTs": "TypeScript",
+    "statusBlurb": "Czytelny interfejs. Przewidywalny stan. Interfejs taktyczny. Bez szumu.",
+    "capNuxtTitle": "Nuxt",
+    "capNuxtBody": "Dostawa przyjazna SEO, wzorce SSR i przejrzysty routing oraz layouty.",
+    "capStateTitle": "Stan",
+    "capStateBody": "Skalowalne wzorce stanu i composables zgodne z konwencją Nuxt.",
+    "capStackTitle": "Stack",
+    "capStackBody": "Vue 3, TypeScript, Tailwind CSS i pragmatyczne narzędzia.",
+    "capDeliveryTitle": "Realizacja",
+    "capDeliveryBody": "Projekty i wkłady skupione na utrzymaniu i efekcie końcowym."
+  },
+  "underConstruction": {
+    "body": "Sekcja jeszcze nie wdrożona.",
+    "back": "Powrót na start",
+    "projects": "Witryna projektów w przygotowaniu.",
+    "about": "Opis profilu w opracowaniu.",
+    "contact": "Konfiguracja kanału kontaktu trwa."
+  }
+}
