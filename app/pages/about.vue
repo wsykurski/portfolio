@@ -1,6 +1,10 @@
 <template>
   <UnderConstruction
-    title="About Me"
-    message="Debugging my life story... turns out it's full of edge cases! 🐛"
+    :title="t('nav.about')"
+    :message="t('underConstruction.about')"
   />
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n()
+</script>

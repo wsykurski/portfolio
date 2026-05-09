@@ -1,6 +1,10 @@
 <template>
   <UnderConstruction
-    title="Contact"
-    message="Setting up my email router... no 404s, I promise! 📬"
+    :title="t('nav.contact')"
+    :message="t('underConstruction.contact')"
   />
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
