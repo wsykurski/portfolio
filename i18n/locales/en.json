@@ -24,6 +24,16 @@
     "switchToPl": "Switch language to Polish",
     "switchToEn": "Switch language to English"
   },
+  "a11y": {
+    "skipToContent": "Skip to main content"
+  },
+  "seo": {
+    "titleDefault": "Portfolio",
+    "titleHome": "Mission brief",
+    "titleProjects": "Projects",
+    "titleAbout": "About",
+    "titleContact": "Contact"
+  },
   "home": {
     "sectionEyebrow": "OPERATIONS",
     "sectionTitle": "MISSION BRIEF",

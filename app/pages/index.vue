@@ -140,7 +140,11 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from '#imports'
+import { useHead, useI18n } from '#imports'
 
 const { t } = useI18n()
+
+useHead(() => ({
+  title: t('seo.titleHome'),
+}))
 </script>

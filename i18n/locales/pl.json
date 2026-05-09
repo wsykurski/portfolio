@@ -24,6 +24,16 @@
     "switchToPl": "Przełącz język na polski",
     "switchToEn": "Przełącz język na angielski"
   },
+  "a11y": {
+    "skipToContent": "Przejdź do treści"
+  },
+  "seo": {
+    "titleDefault": "Portfolio",
+    "titleHome": "Briefing",
+    "titleProjects": "Projekty",
+    "titleAbout": "O mnie",
+    "titleContact": "Kontakt"
+  },
   "home": {
     "sectionEyebrow": "OPERACJE",
     "sectionTitle": "BRIEFING",
